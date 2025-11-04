@@ -1,22 +1,28 @@
 #include<stdio.h>
 
-int main(
-){ 
-int avg,sum=0;
-int i;
-int marks[5];  
-for(i = 0; i<=4; i++)
+int main()
 {
-printf("Enter student marks: "); 
-scanf("%d", &marks[i]); 
-} 
-for(i = 0; i<=4; i++)
-{
-sum = sum + marks[i];
-avg = sum/5; 
-printf("Average marks are:%d\n", avg); 
-printf("total marks are :%d\n", sum);
-}
-return 0;
+    int sum=0;
+    float average;
+    int i;
+    int marks[5];
+
+    for(i=0;i<=4;i++)
+    {
+        printf("Enter student marks: "); 
+        scanf("%d",&marks[i]);
+    }
+
+    for(i=0;i<=4;i++)
+    {
+        sum+=marks[i];
+    }
+
+    average=sum / 5.0;
+
+    printf("Average marks: %f\n",average);
+    printf("Total marks: %d\n",sum);
+
+    return 0;
 }
 
